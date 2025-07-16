@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
     <title>Classic Triangle Puzzle Game</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,17 +28,37 @@
         <section class="video-section">
             <h2>Watch Gameplay</h2>
             <div class="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/K3EBCu-Mw8E" title="Triangle Puzzle Gameplay" frameborder="0" allowfullscreen></iframe>
+                <iframe width="560" height="385" src="https://www.youtube.com/embed/K3EBCu-Mw8E" title="Triangle Puzzle Gameplay" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
         <section class="cta-section">
             <a href="https://chromewebstore.google.com/detail/zen-triangle/mdcomemenjfgfkejfgghafldplfldeld" target="_blank" class="cta-button">
-                Get it on Chrome Web Store
+                <img src="chrome-store.png" alt="Get it on Chrome Web Store" class="chrome-store-img">
+            </a>
+        </section>
+        <section class="cta-section">
+            <a href="/zen-triangle-web/" target="_blank" class="cta-button">
+                <img src="play-in-browser.png" alt="Play in Browser" class="chrome-store-img">
             </a>
         </section>
         <footer>
             <p>Contact: <a href="mailto:contact@nascentsoftware.com">contact@nascentsoftware.com</a></p>
         </footer>
     </div>
-</body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Basic touch detection
+            var isMobileOS = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            // var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            if (isMobileOS) {
+                var ctaButtons = document.querySelectorAll('.cta-button'); // Get ALL elements with this class
+
+                // Iterate over the NodeList and add the class to each button
+                ctaButtons.forEach(function(button) {
+                    button.classList.add('hide-on-touch');
+                });
+            }
+        });
+        </script>
+    </body>
 </html>
