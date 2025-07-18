@@ -14,15 +14,17 @@
         <section class="description">
             <h2>Overview</h2>
             <p>
-                A classic puzzle for everyone. Gameplay is colorful, intuitive and challenging.
+                At Nascent Software, we craft thoughtful and entertaining mobile games designed to spark joy and challenge your mind. We're excited to introduce "Zen Triangle," our latest puzzle adventure—now ready for you to play!
                 <br><br>
-                An age old Chinese puzzle game and unique of its kind. This game is for all age group, 8 to 80.
+                "Zen Triangle" is a timeless puzzle for everyone. The gameplay is vibrant, intuitive, and engaging.
                 <br><br>
-                Gameplay is simple. 12 colorful pieces to put together inside a triangle. Player can rotate an element, flip an element and move it to its correct position. Some elements are symmetric. They cannot be rotated. Some are mirror asymmetric. Only these elements can be flipped.
+                Inspired by a classic Chinese puzzle, this unique game is perfect for all ages, from 8 to 80.
                 <br><br>
-                Play the tutorial to know the basic moves. Then you can dive into the game. There are total 350 stages. Enough to keep you thinking for months.
+                The rules are simple: assemble 12 colorful pieces to complete a triangle. You can rotate, flip, and move the pieces to find their correct positions. Some pieces are symmetric and cannot be rotated, while others are mirror asymmetric and can only be flipped.
                 <br><br>
-                This is an addictive logical puzzle. Parents can play with their kids as an educational game which will help kids to learn how different objects can be put together.
+                Play the tutorial to master the basic moves, then dive into the main game. With 350 stages, "Zen Triangle" will keep you thinking for months!
+                <br><br>
+                This addictive logic puzzle is a great way for parents and kids to play together. It’s both educational and fun—helping children learn how different objects fit together.
             </p>
         </section>
         <section class="video-section">
@@ -32,7 +34,7 @@
             </div>
         </section>
         <section class="cta-section">
-            <a href="https://chromewebstore.google.com/detail/zen-triangle/mdcomemenjfgfkejfgghafldplfldeld" target="_blank" class="cta-button">
+            <a href="https://chromewebstore.google.com/detail/zen-triangle/mdcomemenjfgfkejfgghafldplfldeld" target="_blank" class="store-button">
                 <img src="chrome-store.png" alt="Get it on Chrome Web Store" class="chrome-store-img">
             </a>
         </section>
@@ -43,6 +45,7 @@
         </section>
         <footer>
             <p>Contact: <a href="mailto:contact@nascentsoftware.com">contact@nascentsoftware.com</a></p>
+            <p><a href="https://www.linkedin.com/in/sanmoy/" target="_blank" rel="noopener noreferrer">Meet the Developer</a></p>
         </footer>
     </div>
     <script>
@@ -51,12 +54,19 @@
             var isMobileOS = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
             // var isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
             if (isMobileOS) {
-                var ctaButtons = document.querySelectorAll('.cta-button'); // Get ALL elements with this class
+                var storeButtons = document.querySelectorAll('.store-button'); // Get ALL elements with this class
 
                 // Iterate over the NodeList and add the class to each button
-                ctaButtons.forEach(function(button) {
+                storeButtons.forEach(function(button) {
                     button.classList.add('hide-on-touch');
                 });
+
+                var playInBrowserLink = document.querySelector('.cta-button');
+
+                // Ensure the element was found before trying to modify it
+                if (playInBrowserLink) {
+                    playInBrowserLink.href = "/zen-triangle-touch/";
+                }
             }
         });
         </script>
