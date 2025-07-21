@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /zen-triangle-web/
+Disallow: /zen-triangle-touch/
